@@ -1,0 +1,47 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #DBE6FD;
+}
+
+footer {
+	text-align: center;
+	width: 100%;
+    background-color: #D6E5FA;
+}
+
+.footer-text {
+    margin: 10px !important;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-title {
+    margin-top: 6%;
+}
+
+.navbar {
+    padding: 15px auto;
+    font-size: 12px;
+    letter-spacing: 3px;
+    background-color: #112D4E;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+p:last-child {
+    margin-bottom: 3%;
+}
