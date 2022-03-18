@@ -69,16 +69,14 @@ app.post("/compose", function(req, res) {
 });
 
 app.get("/posts/:postName", function(req, res) {
-  const pathTitle = _.lowerCase(req.params.postName);
+  const pathTitle = _.capitalize(req.params.postName.replace("-", " "));
 
-  posts.forEach(function(post) {
-    const postTitle = _.lowerCase(post.title);
-
-    if (postTitle === pathTitle) {
+  Post.findOne({title: pathTitle}, function(error, post) {
+    if(!error) {
       res.render("post", {
         title: post.title,
-        message: post.message
-      });
+        content: post.content
+      })
     }
   });
 });
